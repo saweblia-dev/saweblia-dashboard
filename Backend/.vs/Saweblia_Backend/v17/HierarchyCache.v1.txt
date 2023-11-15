@@ -1,0 +1,248 @@
+﻿++Solution 'Saweblia_Backend' ‎(1 sur 1 projets)
+i:{00000000-0000-0000-0000-000000000000}:Saweblia_Backend.sln
+++Saweblia_Backend
+i:{00000000-0000-0000-0000-000000000000}:Saweblia_Backend
+++Connected Services 
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>997
+++Dépendances
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>996
+++Properties
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\properties\
+++Controllers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\
+++AccountController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\accountcontroller.cs
+++AdminController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\admincontroller.cs
+++AnswersController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\answerscontroller.cs
+++CategoriesController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\categoriescontroller.cs
+++CommercialController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\commercialcontroller.cs
+++FactureController .cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\facturecontroller .cs
+++FeesController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\feescontroller.cs
+++PrestationController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\prestationcontroller.cs
+++QuestionsController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\questionscontroller.cs
+++TypeTravailController.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\controllers\typetravailcontroller.cs
+++Data
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\
+++DTOs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\
+++AdminDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\admindto.cs
+++AnswerDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\answerdto.cs
+++CategorieDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\categoriedto.cs
+++CommercialDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\commercialdto.cs
+++FactureDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\facturedto.cs
+++LoginRequestDto.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\loginrequestdto.cs
+++OnechoiceAnswerDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\onechoiceanswerdto.cs
+++OnechoiceQuestionDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\onechoicequestiondto.cs
+++PrestationDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\prestationdto.cs
+++QteAnswerDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\qteanswerdto.cs
+++QteQuestionDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\qtequestiondto.cs
+++QuestionDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\questiondto.cs
+++RegisterRequestDto.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\registerrequestdto.cs
+++SettingDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\settingdto.cs
+++TypeTravailDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\typetravaildto.cs
+++UserDTO.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\dtos\userdto.cs
+++Repositories
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\
+++MyDbContext.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\mydbcontext.cs
+++Migrations
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\
+++20230920214106_has.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\20230920214106_has.cs
+++20230920214114_ha.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\20230920214114_ha.cs
+++MyDbContextModelSnapshot.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\mydbcontextmodelsnapshot.cs
+++Models
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\
+++Admin.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\admin.cs
+++Answer.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\answer.cs
+++Categorie.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\categorie.cs
+++Commercial.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\commercial.cs
+++Facture.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\facture.cs
+++FacturePrestationSetting.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\factureprestationsetting.cs
+++Fee.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\fee.cs
+++OnechoiceAnswer.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\onechoiceanswer.cs
+++OnechoiceQuestion.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\onechoicequestion.cs
+++Prestation.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\prestation.cs
+++QteAnswer.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\qteanswer.cs
+++QteQuestion.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\qtequestion.cs
+++Question.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\question.cs
+++Setting.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\setting.cs
+++TypeTravail.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\typetravail.cs
+++User.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\models\user.cs
+++Services
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\
+++Interfaces
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\interfaces\
+++CategorieService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\categorieservice.cs
+++FactureService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\factureservice.cs
+++TypeTravailService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\typetravailservice.cs
+++appsettings.json
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\appsettings.json
+++MappingProfile.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\mappingprofile.cs
+++package.json
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\package.json
+++Program.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\program.cs
+++Aucune dépendance de service découverte
+++Analyseurs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:analyseurs
+++Frameworks
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:frameworks
+++Packages
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:packages
+++launchSettings.json
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\properties\launchsettings.json
+++CategorieRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\categorierepository.cs
+++FactureRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\facturerepository.cs
+++IQuestionRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\iquestionrepository.cs
+++IRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\irepository.cs
+++OnechoiceQuestionRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\onechoicequestionrepository.cs
+++QteQuestionRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\qtequestionrepository.cs
+++QuestionRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\questionrepository.cs
+++TypeTravailRepository.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\data\repositories\typetravailrepository.cs
+++20230920214106_has.Designer.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\20230920214106_has.designer.cs
+++20230920214114_ha.Designer.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\migrations\20230920214114_ha.designer.cs
+++ICategorieService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\interfaces\icategorieservice.cs
+++IFactureService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\interfaces\ifactureservice.cs
+++ITypeTravailService.cs
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\services\interfaces\itypetravailservice.cs
+++appsettings.Development.json
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\appsettings.development.json
+++MessagePackAnalyzer
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.AspNetCore.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.24\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.24\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\microsoft.entityframeworkcore.analyzers\7.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\program files\dotnet\sdk\6.0.124\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\.nuget\packages\system.text.json\7.0.1\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:c:\users\adm\desktop\saweblie\backend\microsoft.netcore.app
+++AutoMapper (12.0.1)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1031
+++AutoMapper.Extensions.Microsoft.DependencyInjection (12.0.1)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1021
+++Microsoft.AspNet.Cors (5.2.9)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1035
+++Microsoft.AspNetCore.Authentication.Google (6.0.0)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1029
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.0)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1033
+++Microsoft.AspNetCore.Cors (2.1.1)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1027
+++Microsoft.AspNetCore.Http (2.2.2)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1032
+++Microsoft.AspNetCore.Mvc.NewtonsoftJson (6.0.16)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1030
+++Microsoft.EntityFrameworkCore.Design (7.0.5)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1022
+++Microsoft.EntityFrameworkCore.Proxies (7.0.5)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1026
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.23)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1020
+++Microsoft.EntityFrameworkCore.Tools (6.0.23)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1034
+++Microsoft.Extensions.DependencyInjection.Abstractions (7.0.0)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1025
+++Microsoft.Extensions.Logging.Abstractions (7.0.0)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1019
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.16)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1036
+++MySql.EntityFrameworkCore (7.0.2)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1028
+++Newtonsoft.Json (13.0.3)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1024
+++Swashbuckle.AspNetCore (6.5.0)
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1023
+++Base de données de serveur SQL
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1039
+++Dépendance Base de données de serveur SQL détectée
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1040
+++Plateforme d'identités Microsoft
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1041
+++Dépendance Plateforme d'identités Microsoft détectée
+i:{ca2e9b0e-809e-4f02-8f4e-54720b82b0a8}:>1042
+++JsonIgnoreAttribute.cs
