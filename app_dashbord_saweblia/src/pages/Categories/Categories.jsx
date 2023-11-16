@@ -12,56 +12,61 @@ function Categories() {
   const [newCategoryName, setNewCategoryName] = useState(""); 
   const [categoryAnswers, setCategoryAnswers] = useState([]);
 
-  const testSwal = () => {
-    Swal.fire("Test Swal", "Ceci est un test de Swal.", "success");
-  };
+ 
 
   const handleDeleteCategory = () => {
-    if (selectedCategory) {
-      Swal.fire({
-        title: "Attention!",
-        text: "Vous êtes sur le point de supprimer cette catégorie. Cette action est irréversible. Voulez-vous vraiment continuer ?",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#d33",
-        cancelButtonColor: "#3085d6",
-        confirmButtonText: "Oui, supprimer",
-        cancelButtonText: "Annuler",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          axios
-            .delete(`https://localhost:44314/categories/${selectedCategory.id}`)
-            .then((response) => {
-              if (response.status === 200) {
-                setCategories((prevCategories) =>
-                  prevCategories.filter(
-                    (category) => category.id !== selectedCategory.id
-                  )
-                );
-                Swal.fire(
-                  "Supprimé !",
-                  "Votre élément a été supprimé .",
-                  "success"
-                );
-                setSelectedCategory(null); 
-              }
-            })
-            .catch((error) => {
-              console.error(
-                "Une erreur s'est produite lors de la suppression de la catégorie :",
-                error
-              );
-            });
-        }
-      });
-    } else {
-      Swal.fire(
-        "Erreur",
-        "Veuillez sélectionner une catégorie à supprimer.",
-        "error"
-      );
+    if (!selectedCategory) {
+      Swal.fire("Erreur", "Aucune catégorie sélectionnée.", "error");
+      return;
     }
+  
+    Swal.fire({
+      title: "Attention!",
+      text:
+        "Vous êtes sur le point de supprimer cette catégorie. Cette action est irréversible. Voulez-vous vraiment continuer ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Oui, supprimer",
+      cancelButtonText: "Annuler",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // L'utilisateur a confirmé la suppression
+        axios
+          .delete(`https://localhost:44314/categories/${selectedCategory.id}`)
+          .then((response) => {
+            if (response.status === 204) {
+              // Suppression réussie
+              // Mettez à jour la liste des catégories en excluant la catégorie supprimée
+              setCategories((prevCategories) =>
+                prevCategories.filter(
+                  (category) => category.id !== selectedCategory.id
+                )
+              );
+              // Affichez un message de succès avec Swal
+              Swal.fire(
+                "Supprimé !",
+                "Votre catégorie a été supprimée avec succès.",
+                "success"
+              );
+              // Remettez à zéro la catégorie sélectionnée
+              setSelectedCategory(null);
+            }
+          })
+          .catch((error) => {
+            console.error("Erreur lors de la suppression de la catégorie :", error);
+            // Affichez un message d'erreur avec Swal
+            Swal.fire(
+              "Erreur",
+              "Une erreur s'est produite lors de la suppression de la catégorie.",
+              "error"
+            );
+          });
+      }
+    });
   };
+  
 
   const handleAddCategory = () => {
     if (newCategoryName.trim() === "") {
