@@ -14,8 +14,8 @@ function FacturePDF({ facture }) {
   };
 
   return (
-    <div className="flex flex-col rounded-md border border-slate-200">
-     <div className="p-10   max-h-[700px] overflow-y-scroll" id="facture-container">
+    <div>
+        <div  id="facture-container">
         <h3 className="text-xl pb-6 font-medium text-gray-700">{facture.ti}</h3>
         <div className="w-full mx-auto rounded-lg bg-white border border-gray-200 p-3 text-gray-800 font-light mb-6">
           <div className="w-full flex mb-3 items-center">
@@ -110,9 +110,8 @@ function FacturePDF({ facture }) {
           </div>
         </div>
 
-      
-      </div>
-      <div className="my-6 py-6 border-t border-gray-200">
+        </div>
+        <div className="my-6 py-6 border-t border-gray-200">
           <div className="-mx-2 flex items-end justify-end">
             <div className="px-6">
               <button

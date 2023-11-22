@@ -104,8 +104,12 @@ function ModifierPrestation() {
 
   return (
     <div>
-      <div className="flex flex-wrap flex-row -mx-4 text-center">
+            <div className=" flex items-center justify-center h-screen  flex-wrap flex-row  text-center">
+
         <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/2 lg:px-6 wow fadeInUp mx-auto">
+        <h2 className="text-2xl leading-normal my-6 font-bold text-black">
+Modification Prestation 
+</h2>
           <form
             action=""
             method="POST"

@@ -34,10 +34,11 @@ function App() {
   }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
   return (
-    <div className="App">
-       {/* {isAuthenticated && <Header />} */}
+    <div className="flex">
+       {/* {isAuthenticated && <Header />}  */}
       {isAuthenticated && <Sidebar />}
-     
+    <div className="flex-1 ">
+      {/* Contenu principal de la page */}
       <Router>
         <Routes>
           {!isAuthenticated && <Route path="/" element={<Login />} />}
@@ -60,6 +61,8 @@ function App() {
         </Routes>
       </Router>
     </div>
+  </div>
+  
   );
 }
 

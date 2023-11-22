@@ -56,9 +56,9 @@ function Commercials() {
 
   return (
     <div>
-      <div className="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-        <section className="bg-white p-20 lg:py-[20px] overflow-hidden relative z-10">
+      <div className=" flex items-center justify-center h-screen">
           <div className="container">
+
             <div className="grid grid-cols-2 bg-white">
               <div className="flex flex-col items-center">
                 <div>
@@ -75,10 +75,9 @@ function Commercials() {
               </div>
             </div>
 
-            <div className="flex min-h-screen justify-center p-2 bg-white">
-              <div className="container grid max-w-screen-xl gap-8 lg:grid-cols-2 lg:grid-rows-2">
-                <div className="flex flex-col rounded-md border border-slate-200">
-                  <div className="mt-4 ">
+            <div className="flex justify-center p-2 bg-wthit">
+               <div className=" flex flex-col w-[400px] rounded-md border border-slate-200">
+               <div className="mt-4 ">
                     <div className="flex max-h-[800px] w-full flex-col overflow-y-scroll">
                       {commercials
                         .filter(
@@ -112,9 +111,10 @@ function Commercials() {
                     </div>
                   </div>
                 </div>
-                {selectedCommercial && (
-                <div className="flex flex-col rounded-md border border-slate-200">
-                  <div className="p-10">
+                <div className="flex flex-col ml-10 w-[800px] max-h-[800px] overflow-y-scroll  rounded-md border border-slate-200">
+              <div className="p-10   ">
+                {selectedCommercial ? (
+               <div>
                     <h3 className="text-xl pb-6 font-medium text-gray-700">
                       {selectedCommercial.mrbricolage} 
                     </h3>
@@ -159,27 +159,34 @@ function Commercials() {
                         <div className="px-2">
                           {selectedCommercial && (
                             <Link to={`/ModifierCommercial/${selectedCommercial.id}`}>
-                              <Button text="Modifier" />
+                              <button      className="w-[200px] bg-green-500 text-white max-w-xs mx-auto border border-transparent hover:bg-gray-500 focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold" >
+                                Modifier
+                                  </button>
                             </Link>
                           )}
                         </div>
                         <div className="px-2">
-                          <button
-                            className="block w-full max-w-xs mx-auto border border-transparent bg-gray-400 hover:bg-gray-500 focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold"
-                            onClick={handleDelete}
+                        <button
+                     className="block w-full max-w-xs mx-auto border border-transparent bg-red-500 hover:bg-gray-500 focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold"
+                     onClick={handleDelete}
                           >
                             Supprimer
                           </button>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                 </div>
+                  ): (
+                    <div>
+                    <p>Aucune commercial sélectionnée</p>
+                   </div>
                 )}
+                 </div>
+                </div>
               </div>
-            </div>
+           
           </div>
-        </section>
+       
       </div>
     </div>
   );

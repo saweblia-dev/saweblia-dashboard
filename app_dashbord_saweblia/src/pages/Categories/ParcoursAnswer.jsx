@@ -10,18 +10,18 @@ function ParcoursAnswer() {
 
   const [recordList, setRecordList] = useState([]);
   const [recordListLoading, setRecordListLoading] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     value: valueChoiceAnswers,
-    idAnswer: "", 
+    idAnswer: "",
   });
 
-  const [dataList, setDataList] = useState([]); 
-  const [createdDataIds, setCreatedDataIds] = useState([]); 
+  const [dataList, setDataList] = useState([]);
+  const [createdDataIds, setCreatedDataIds] = useState([]);
 
   const handleValueChange = (event) => {
     setValueChoiceAnswers(event.target.value);
- 
+
     setFormData({
       ...formData,
       value: event.target.value,
@@ -29,86 +29,87 @@ function ParcoursAnswer() {
     console.log("data", formData);
   };
 
-const handleCategoryClick = (idAnswer) => {
-  setSelectedCategoryId(idAnswer);
+  const handleCategoryClick = (idAnswer) => {
+    setSelectedCategoryId(idAnswer);
 
-  setRecordList([]);
-  setFormData({
-    ...formData,
-    idAnswer: idAnswer.toString(),
-  });
-
-  setRecordListLoading(true);
-  axios
-    .get(`https://localhost:44314/MultiChoiceAnswers/idanswer/${idAnswer}`)
-    .then((response) => {
-      setRecordList(response.data);
-      setRecordListLoading(false);
-      console.log("Data retrieved successfully:", response.data);
-    })
-    .catch((error) => {
-      setRecordList([]);
-      setRecordListLoading(false);
-      console.error("Error retrieving data:", error);
+    setRecordList([]);
+    setFormData({
+      ...formData,
+      idAnswer: idAnswer.toString(),
     });
-};
 
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-
-  const newData = {
-    value: formData.value,
-    idAnswer: selectedCategoryId,
+    setRecordListLoading(true);
+    axios
+      .get(`https://localhost:44314/MultiChoiceAnswers/idanswer/${idAnswer}`)
+      .then((response) => {
+        setRecordList(response.data);
+        setRecordListLoading(false);
+        console.log("Data retrieved successfully:", response.data);
+      })
+      .catch((error) => {
+        setRecordList([]);
+        setRecordListLoading(false);
+        console.error("Error retrieving data:", error);
+      });
   };
 
-  axios
-    .post("https://localhost:44314/MultiChoiceAnswers", newData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then((response) => {
-      console.log("Data submitted successfully:", response.data);
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-      setDataList([...dataList, response.data]);
+    const newData = {
+      value: formData.value,
+      idAnswer: selectedCategoryId,
+    };
 
-      setFormData({
-        value: "",
-        idAnswer: "",
-      });
+    axios
+      .post("https://localhost:44314/MultiChoiceAnswers", newData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log("Data submitted successfully:", response.data);
 
-      axios
-        .get(`https://localhost:44314/MultiChoiceAnswers/idanswer/${selectedCategoryId}`)
-        .then((response) => {
-          setRecordList(response.data);
-          console.log("Data refreshed successfully:", response.data);
-        })
-        .catch((error) => {
-          console.error("Error refreshing data:", error);
+        setDataList([...dataList, response.data]);
+
+        setFormData({
+          value: "",
+          idAnswer: "",
         });
-    })
-    .catch((error) => {
-      console.error("Error submitting data:", error);
-    });
-};
 
+        axios
+          .get(
+            `https://localhost:44314/MultiChoiceAnswers/idanswer/${selectedCategoryId}`
+          )
+          .then((response) => {
+            setRecordList(response.data);
+            console.log("Data refreshed successfully:", response.data);
+          })
+          .catch((error) => {
+            console.error("Error refreshing data:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Error submitting data:", error);
+      });
+  };
 
-const handleDeleteData = (index) => {
-  const updatedRecordList = [...recordList];
+  const handleDeleteData = (index) => {
+    const updatedRecordList = [...recordList];
 
-  updatedRecordList.splice(index, 1);
+    updatedRecordList.splice(index, 1);
     setRecordList(updatedRecordList);
-  
-  const dataToDelete = recordList[index];
-  axios.delete(`https://localhost:44314/MultiChoiceAnswers/${dataToDelete.id}`)
-    .then((response) => {
-      console.log("Data deleted successfully.");
-    })
-    .catch((error) => {
-      console.error("Error deleting data:", error);
-    });
-};
+
+    const dataToDelete = recordList[index];
+    axios
+      .delete(`https://localhost:44314/MultiChoiceAnswers/${dataToDelete.id}`)
+      .then((response) => {
+        console.log("Data deleted successfully.");
+      })
+      .catch((error) => {
+        console.error("Error deleting data:", error);
+      });
+  };
 
   useEffect(() => {
     axios
@@ -129,36 +130,32 @@ const handleDeleteData = (index) => {
   const handleCancel = () => {
     setFormData({
       ...formData,
-      value: ""
+      value: "",
     });
   };
-  
-useEffect(() => {
-  if (selectedCategoryId !== null) {
-    axios
-      .get(`https://localhost:44314/MultiChoiceAnswers/idanswer/${selectedCategoryId}`)
-      .then((response) => {
-        setDataList(response.data);
-        console.log("Data retrieved successfully:", response.data);
-      })
-      .catch((error) => {
-        console.error("Error retrieving data:", error);
-      });
-  }
-}, [selectedCategoryId]);
+
+  useEffect(() => {
+    if (selectedCategoryId !== null) {
+      axios
+        .get(
+          `https://localhost:44314/MultiChoiceAnswers/idanswer/${selectedCategoryId}`
+        )
+        .then((response) => {
+          setDataList(response.data);
+          console.log("Data retrieved successfully:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error retrieving data:", error);
+        });
+    }
+  }, [selectedCategoryId]);
   return (
     <div>
-      <div
-        id="services"
-        className="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white"
-      >
-        <div className="container xl:max-w-6xl mx-auto px-4">
-          <div class="w-10/12 mx-auto max-w-6xl">
-            <div class="lg:col-start-2 col-span-12 lg:col-span-10 grid grid-cols-6 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 mx-auto">
-              <div class="p-4 col-span-6 md:col-span-2 ">
-              
-                <div class="grid grid-cols-5">
-                  {categories.map((category) => (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg ">
+          <div class="p-1 bg-blue-200"></div>
+          <div class="p-8">
+          {categories.map((category) => (
                     <div
                       class={`md:col-span-5 group relative flex items-left gap-x-6 rounded-lg p-3 text-sm leading-6 hover:bg-indigo-50 ${
                         selectedCategoryId === category.id
@@ -194,15 +191,17 @@ useEffect(() => {
                           {category.value}
                           <span class="absolute inset-0"></span>
                         </button>
-                        {/* <p class="mt-1 text-gray-600">id : {category.id}</p> */}
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
+          </div>
+        
+        </div>
 
-              <div class="p-4 col-span-6 md:col-span-4">
-                <form method="POST" onSubmit={handleSubmit}>
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg ">
+          <div class="p-1 bg-green-200"></div>
+          <div class="p-8">
+          <form method="POST" onSubmit={handleSubmit}>
                   <div class="mx-auto grid grid-cols-2 gap-x-8 gap-y-10">
                     <div class="col-span-2">
                       <div class="flex flex-wrap">
@@ -254,17 +253,21 @@ useEffect(() => {
                     </button>
                   </div>
                 </form>
+          </div>
+        
+        </div>
 
-
-
-                {recordListLoading ? (
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg ">
+          <div class="p-1 bg-purple-200"></div>
+          <div class="p-8">
+          {recordListLoading ? (
   <div>Loading...</div>
 ) : (
   recordList.length > 0 ? (
     recordList.map((data, index) => (
       <div
         key={index}
-        className="flex flex-col m-4 p-8 bg-white shadow-md hover:shadow-lg rounded-2xl"
+        className="flex flex-col m-4 p-2 bg-white shadow-md hover:shadow-lg rounded-2xl"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -300,13 +303,12 @@ useEffect(() => {
     <div>No data available.</div>
   )
 )}
-
-
-              </div>
-            </div>
           </div>
+         
         </div>
       </div>
+
+      
     </div>
   );
 }

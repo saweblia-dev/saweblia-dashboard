@@ -14,7 +14,7 @@ function Sidebar() {
   };
   return (
     <div>
-      <aside class=" w-1/4 p-4 ml-[-100%] fixed z-10 top-0 pb-3 px-6 flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+      <div className=" text-white w-64 p-4 flex flex-col justify-between h-screen border-r bg-white   ">
         <div>
           <div className="-mx-6 px-6 py-4 flex justify-center items-center">
             <a href="" title="home">
@@ -184,7 +184,9 @@ function Sidebar() {
             <span class="group-hover:text-gray-700">Logout</span>
           </button>
         </div>
-      </aside>
+      {/* </aside> */}
+    </div>
+    
     </div>
   );
 }

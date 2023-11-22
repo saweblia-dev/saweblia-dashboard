@@ -84,9 +84,10 @@ function DepannageReparation(props) {
 
   return (
     <div>
-      <div className="flex flex-wrap flex-row -mx-4 text-center">
-        <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/2 lg:px-6 wow fadeInUp mx-auto">
-          <form
+    <h3 className="block font-sans text-5xl font-semibold leading-tight tracking-normal text-inherit antialiased">
+        Ajouter Depannege
+      </h3>
+      <form
             action=""
             method="POST"
             className="mx-auto"
@@ -229,9 +230,6 @@ function DepannageReparation(props) {
               <Button text="Ajouter" />
             </div>
           </form>
-     
-        </div>
-      </div>
     </div>
   );
 }
