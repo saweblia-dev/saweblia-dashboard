@@ -27,7 +27,6 @@ const AjouterPrestation = () => {
 
             </div>
 
-            {/* <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">These companies have purchased in the last 12 months.</p> */}
         </div>
 
         
@@ -61,17 +60,26 @@ const AjouterPrestation = () => {
         </div>
     </div>
 
-    <div class="flex items-center m-6 py-6 text-center border rounded-lg max-h-[900px] dark:border-gray-700">
-        <div class="flex flex-col w-full max-w-[600px] px-4 mx-auto">
-          
-            {selectedComponent === "depannage" && (
-  <DepannageReparation selectedComponent={selectedComponent} />
-)}
-        {selectedComponent === "packs" && (
-          <PacksVisites  selectedComponent={selectedComponent} /> 
-        )}
-        </div>
-    </div>
+    <div class="flex  h-[80vh] items-center m-6 py-6 text-center border rounded-lg max-h-[900px] dark:border-gray-700">
+  <div class="flex flex-col w-full max-w-[600px] px-4 mx-auto">
+    {selectedComponent === null && (
+    <div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+   <p className="ml-2 text-gray-600 dark:text-gray-300">Veuillez choisir entre "Depannage" et "Packs".</p>
+   </div>
+    )}
+
+    {selectedComponent === "depannage" && (
+      <DepannageReparation selectedComponent={selectedComponent} />
+    )}
+
+    {selectedComponent === "packs" && (
+      <PacksVisites selectedComponent={selectedComponent} />
+    )}
+  </div>
+</div>
 
    
 </section>

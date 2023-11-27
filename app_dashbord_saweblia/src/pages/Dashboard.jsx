@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const chartRef = useRef(null);
@@ -10,6 +11,67 @@ function Dashboard() {
   const [tarifs, setTarifs] = useState([]);
   const [prestations, setPrestations] = useState([]);
   const [totalPrestations, setTotalPrestations] = useState(0);
+  const [factorCount, setFactorCount] = useState(0);
+  const [commercialCount, setCommercialCount] = useState(0); 
+  const [userCount, setUserCount] = useState(0);
+  const [totalFactures, setTotalFactures] = useState(0);
+  const [variationPercentage, setVariationPercentage] = useState(0);
+  const [totalPrestationsLastMonth, setTotalPrestationsLastMonth] = useState(0);
+
+
+  useEffect(() => {
+    // Make API request to get count of commercial entities
+    axios
+      .get("https://localhost:44314/Commercial")
+      .then((response) => {
+        // Update the count of commercial entities
+        setCommercialCount(response.data.length);
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la récupération des commerciaux :", error);
+      });
+  }, []); // Empty dependency array to run this effect only once on component mount
+
+  useEffect(() => {
+    // Make API request to get count of users
+    axios
+      .get("https://localhost:44314/api/users")
+      .then((response) => {
+        // Update the count of users
+        setUserCount(response.data.length);
+      })
+      .catch((error) => {
+        console.error("Error fetching user count:", error);
+      });
+  }, []); 
+  useEffect(() => {
+    axios
+      .get("https://localhost:44314/facture/all")
+      .then((response) => {
+        setFactures(response.data);
+  
+        // Mettez à jour le total des facteurs pour le mois précédent
+        const previousMonthFactures = response.data.filter((facture) => {
+          const currentMonth = new Date().getMonth();
+          const factureMonth = new Date(facture.date).getMonth();
+          return factureMonth === currentMonth - 1;
+        });
+  
+        const totalPreviousMonth = previousMonthFactures.reduce(
+          (total, facture) => total + facture.tarif,
+          0
+        );
+  
+        // Mettez à jour la variation en pourcentage
+        const variationPercentage =
+          ((totalFactures - totalPreviousMonth) / totalPreviousMonth) * 100;
+  
+        // Utilisez variationPercentage dans votre JSX pour l'affichage
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la récupération des factures :", error);
+      });
+  }, []);
 
   useEffect(() => {
     // Effectuez une requête GET vers l'API pour obtenir la liste des prestations
@@ -18,15 +80,26 @@ function Dashboard() {
       .then((response) => {
         // Mettez à jour l'état avec les données des prestations reçues
         setPrestations(response.data);
-
+  
         // Calculez le nombre total de prestations en utilisant la longueur de la liste
         setTotalPrestations(response.data.length);
       })
       .catch((error) => {
-        console.error(
-          "Erreur lors de la récupération des prestations :",
-          error
-        );
+        console.error("Erreur lors de la récupération des prestations :", error);
+      });
+  
+    // Effectuez une requête GET vers l'API pour obtenir le nombre total de prestations du mois dernier
+    // Utilisez la logique appropriée pour déterminer le mois dernier (par exemple, en soustrayant un mois à la date actuelle)
+    const lastMonthStartDate = new Date();
+    lastMonthStartDate.setMonth(lastMonthStartDate.getMonth() - 1);
+    
+    axios
+      .get(`https://localhost:44314/api/Prestation/total?start=${lastMonthStartDate.toISOString()}`)
+      .then((response) => {
+        setTotalPrestationsLastMonth(response.data);
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la récupération des prestations du mois dernier :", error);
       });
   }, []);
 
@@ -127,12 +200,11 @@ function Dashboard() {
                       {totalPrestations}
                     </h4>
                   </div>
-                  <div class="border-t border-blue-gray-50 p-4">
-                    <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
-                      <strong class="text-green-500">+55%</strong>&nbsp;than
-                      last week
-                    </p>
-                  </div>
+                  <Link to="prestations">
+                  <button class="border-t border-blue-gray-50 p-4">
+                  aller à la prestation
+                  </button>
+                  </Link>
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
                   <div class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-pink-600 to-pink-400 text-white shadow-pink-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
@@ -152,18 +224,19 @@ function Dashboard() {
                   </div>
                   <div class="p-4 text-right">
                     <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
-                      Today's Users
+                     Commercial
                     </p>
                     <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                      2,300
+                   {commercialCount}
                     </h4>
                   </div>
-                  <div class="border-t border-blue-gray-50 p-4">
-                    <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
-                      <strong class="text-green-500">+3%</strong>&nbsp;than last
-                      month
-                    </p>
-                  </div>
+         
+                  <Link to="Commercials">
+                  <button class="border-t border-blue-gray-50 p-4">
+                  aller à page Commercials
+                  </button>
+                  </Link>
+                  
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
                   <div class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-green-600 to-green-400 text-white shadow-green-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
@@ -179,18 +252,17 @@ function Dashboard() {
                   </div>
                   <div class="p-4 text-right">
                     <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
-                      New Clients
+                    utilisateurs
                     </p>
                     <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                      3,462
+                    {userCount}
                     </h4>
                   </div>
-                  <div class="border-t border-blue-gray-50 p-4">
-                    <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
-                      <strong class="text-red-500">-2%</strong>&nbsp;than
-                      yesterday
-                    </p>
-                  </div>
+                  <Link to="Utilisateurs">
+                  <button class="border-t border-blue-gray-50 p-4">
+                  aller à page  utilisateurs
+                  </button>
+                  </Link>
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
                   <div class="bg-clip-border mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-orange-600 to-orange-400 text-white shadow-orange-500/40 shadow-lg absolute -mt-4 grid h-16 w-16 place-items-center">
@@ -206,18 +278,17 @@ function Dashboard() {
                   </div>
                   <div class="p-4 text-right">
                     <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
-                      Sales
+                    Factures
                     </p>
                     <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                      $103,430
+                        {factorCount}
                     </h4>
                   </div>
-                  <div class="border-t border-blue-gray-50 p-4">
-                    <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
-                      <strong class="text-green-500">+5%</strong>&nbsp;than
-                      yesterday
-                    </p>
-                  </div>
+                  <Link to="Factures">
+                  <button class="border-t border-blue-gray-50 p-4">
+                  aller à page Factures
+                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -225,7 +296,7 @@ function Dashboard() {
               <canvas ref={chartRef} />
             </div>
           </div>
-        {/* </section> */}
+       
       </div>
     </div>
   );

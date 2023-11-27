@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard'
-import Users from './pages/Users';
+import Users from './pages/Users/User';
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Categories from './pages/Categories/Categories'

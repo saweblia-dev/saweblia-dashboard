@@ -163,6 +163,7 @@ function Sidebar() {
               </a>
             </li>
           </ul>
+    
         </div>
 
         <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
